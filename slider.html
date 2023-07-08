@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="11.jpg" alt="" height="500px" width="100%" id="i2">
+
+    <button onclick="changeImages()">
+        Change Images
+    </button>
+
+    <script>
+
+        img = document.getElementById('i2');
+
+        function changeImages()
+        {   
+            console.log(img.src);
+
+            if(img.src.match('11.jpg'))
+            {
+                img.src = '12.jpg';
+            }
+
+            else if(img.src.match('12.jpg'))
+            {
+                img.src = '13.jpg';
+            }
+
+            else if(img.src.match('13.jpg'))
+            {
+                img.src = '14.jpg';
+            }
+
+            else 
+            {
+                img.src = '11.jpg';
+            }
+
+
+            setTimeout("changeImages()",1000)
+        }
+
+        changeImages();
+
+       
+    </script>
+</body>
+</html>
